@@ -11,7 +11,9 @@ const SelectedClasses = () => {
   const { user } = useContext(AuthContext);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/carts?email=${user?.email}`)
+      .get(
+        `https://shutter-snap-academy-server-rohanhaque1.vercel.app/carts?email=${user?.email}`
+      )
       .then((res) => {
         const data = res.data;
         setCarts(data);

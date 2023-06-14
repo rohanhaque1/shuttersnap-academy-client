@@ -30,11 +30,14 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         axios
-          .post("http://localhost:5000/users", {
-            name: loggedUser.displayName,
-            email: loggedUser.email,
-            photo: loggedUser.photoURL,
-          })
+          .post(
+            "https://shutter-snap-academy-server-rohanhaque1.vercel.app/users",
+            {
+              name: loggedUser.displayName,
+              email: loggedUser.email,
+              photo: loggedUser.photoURL,
+            }
+          )
           .then(() => {
             toast.success("User Login Successful ..!!");
             navigate(from, { replace: true });

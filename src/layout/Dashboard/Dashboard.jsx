@@ -10,11 +10,13 @@ import { MdOutlineManageSearch } from "react-icons/md";
 import { HiAcademicCap } from "react-icons/hi";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/useInstructor";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
-  const isAdmin = false;
-  const isInstructor = true;
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
   return (
     <>
       <div className="drawer lg:drawer-open bg-green-300 dark:bg-gray-900 dark:text-gray-200">

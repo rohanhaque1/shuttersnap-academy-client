@@ -9,13 +9,13 @@ const useCarts = () => {
     queryKey: ["carts", user?.email],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/carts?email=${user?.email}`
+        `https://shutter-snap-academy-server-rohanhaque1.vercel.app/carts?email=${user?.email}`
       );
 
       return res.json();
     },
   });
-    return [cart, refetch]
+  return [cart, refetch];
 };
 
 export default useCarts;

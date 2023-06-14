@@ -19,7 +19,9 @@ const CartTable = ({ item, index, carts, setCarts }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/carts/${_id}`)
+          .delete(
+            `https://shutter-snap-academy-server-rohanhaque1.vercel.app/carts/${_id}`
+          )
           .then((res) => {
             const data = res.data;
             if (data.deletedCount > 0) {

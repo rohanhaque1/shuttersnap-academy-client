@@ -29,16 +29,18 @@ const Register = () => {
     createUser(data.email, data.password)
       .then(() => {
         userProfile(data.name, data.photo).then(() => {
-          const saveUser = {
-            name: data.name,
-            email: data.email,
-            photo: data.photo,
-            phone: data.phone,
-            address: data.address,
-            gender: data.gender,
-          };
           axios
-            .post("http://localhost:5000/users", { saveUser })
+            .post(
+              "https://shutter-snap-academy-server-rohanhaque1.vercel.app/users",
+              {
+                name: data.name,
+                email: data.email,
+                photo: data.photo,
+                phone: data.phone,
+                address: data.address,
+                gender: data.gender,
+              }
+            )
             .then((res) => {
               const data = res.data;
               if (data.insertedId) {

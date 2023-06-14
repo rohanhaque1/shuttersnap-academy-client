@@ -61,7 +61,10 @@ const AuthProvider = ({ children }) => {
       // jw token api
       if (currentUser) {
         axios
-          .post("http://localhost:5000/jwt", { email: currentUser.email })
+          .post(
+            "https://shutter-snap-academy-server-rohanhaque1.vercel.app/jwt",
+            { email: currentUser.email }
+          )
           .then((res) => {
             const data = res.data;
             localStorage.setItem("secret-token", data.token);

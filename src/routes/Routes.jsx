@@ -17,6 +17,8 @@ import AdminHome from "../components/Pages/Others/Dashboard/AdminDashboard/Admin
 import InstructorHome from "../components/Pages/Others/Dashboard/InstructorDashboard/InstructorHome/InstructorHome";
 import AddClass from "../components/Pages/Others/Dashboard/InstructorDashboard/AddClass/AddClass";
 import MyClass from "../components/Pages/Others/Dashboard/InstructorDashboard/MyClass/MyClass";
+import Modal from "../components/Shared/Modal/Modal";
+import Feedback from "../components/Shared/Feedback/Feedback";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +92,14 @@ const router = createBrowserRouter([
         path: "myclass",
         element: <MyClass></MyClass>,
       },
+      {
+        path: 'modal/:id',
+        element: <Modal></Modal>
+      },
+      {
+        path: 'feedback/:id',
+        element: <Feedback></Feedback>
+      }
     ],
   },
 ]);

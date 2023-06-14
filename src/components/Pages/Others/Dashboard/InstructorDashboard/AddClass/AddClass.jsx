@@ -10,11 +10,13 @@ const AddClass = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     axios
-      .post("http://localhost:5000/classes", {
-        data,
-      })
+      .post(
+        "https://shutter-snap-academy-server-rohanhaque1.vercel.app/myclass",
+        {
+          data,
+        }
+      )
       .then((res) => {
         if (res.data.insertedId) {
           toast.success("Class Added Successfully...");

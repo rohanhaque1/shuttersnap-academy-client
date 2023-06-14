@@ -2,10 +2,15 @@
 
 ## Live Link:
 
-Hosted in Firebase -> [ShutterSnap Academy]()
+Hosted in Firebase -> [ShutterSnap Academy](https://shuttersnap-academy-client.web.app/)
 
 ## Admin Email:
 
+rohan@gmail.com
+
+## Admin Password: 
+
+@Abc24
 
 
 ## Resources Repository:

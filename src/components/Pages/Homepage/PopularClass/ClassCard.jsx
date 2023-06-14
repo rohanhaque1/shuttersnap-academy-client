@@ -25,14 +25,17 @@ const ClassCard = ({ item }) => {
   const handleSelect = (cartId) => {
     if (user) {
       axios
-        .post("http://localhost:5000/carts", {
-          cartId,
-          name: className,
-          photo: image,
-          price,
-          instructorName,
-          email: user?.email,
-        })
+        .post(
+          "https://shutter-snap-academy-server-rohanhaque1.vercel.app/carts",
+          {
+            cartId,
+            name: className,
+            photo: image,
+            price,
+            instructorName,
+            email: user?.email,
+          }
+        )
         .then((res) => {
           if (res.data.insertedId) {
             toast.success("Class Selected Successfully...");
